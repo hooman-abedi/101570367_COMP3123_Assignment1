@@ -755,9 +755,9 @@
               "listen": "test",
               "script": {
                 "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"empA\", pm.response.json().employee_id);"
-                ]
+                "exec": 
+                  ""
+                
               }
             }
           ],
@@ -892,7 +892,7 @@
           "response": []
         },
         {
-          "name": "Create - Invalid JW",
+          "name": "Create - Invalid JWT",
           "event": [
             {
               "listen": "test",
@@ -1491,7 +1491,7 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": ""
+      "value": "http://localhost:3000"
     },
     {
       "key": "tokenA",
