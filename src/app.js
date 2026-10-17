@@ -5,13 +5,26 @@ const mongoose = require('mongoose');
 const logger = require('./utils/logger');
 const { apiLimiter } = require('./middleware/rateLimiter');
 const { notFound, errorHandler } = require('./middleware/errorHandler');
+const connectDB = require('./config/db');
 
 const app = express();
 
-app.use(helmet());                        // security headers
-app.use(express.json({ limit: '10kb' })); // parse JSON, reject huge bodies
+app.set('trust proxy', 1); 
+
+
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    next(err);
+  }
+});
+
+app.use(helmet());                        
+app.use(express.json({ limit: '10kb' })); 
 app.use(morgan(':method :url :status :response-time ms', {
-  stream: { write: (msg) => logger.info(msg.trim()) },   // request logs -> files
+  stream: { write: (msg) => logger.info(msg.trim()) },   
 }));
 
 app.get('/health', (req, res) => {
