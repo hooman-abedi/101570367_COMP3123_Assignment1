@@ -1,0 +1,32 @@
+{"level":"info","message":"Connected to MongoDB database: comp3123_assignment1","timestamp":"2026-10-17T05:40:09.505Z"}
+{"level":"info","message":"Server started on port 3000","timestamp":"2026-10-17T05:40:09.508Z"}
+{"level":"info","message":"GET /health 200 1.196 ms","timestamp":"2026-10-17T05:33:03.920Z"}
+{"level":"info","message":"User signed up: userA","timestamp":"2026-10-17T05:40:26.378Z"}
+{"level":"info","message":"POST /api/v1/user/signup 201 309.713 ms","timestamp":"2026-10-17T05:40:26.380Z"}
+{"level":"info","message":"POST /api/v1/user/signup 409 43.528 ms","timestamp":"2026-10-17T06:09:13.959Z"}
+{"level":"warn","message":"Validation failed POST /api/v1/user/signup: email","timestamp":"2026-10-17T06:13:18.173Z"}
+{"level":"info","message":"POST /api/v1/user/signup 400 2.144 ms","timestamp":"2026-10-17T06:13:18.174Z"}
+{"level":"info","message":"Login success: userA","timestamp":"2026-10-17T06:27:06.324Z"}
+{"level":"info","message":"POST /api/v1/user/login 200 260.443 ms","timestamp":"2026-10-17T06:27:06.325Z"}
+{"level":"warn","message":"Login failed for: userA","timestamp":"2026-10-17T06:18:11.811Z"}
+{"level":"info","message":"POST /api/v1/user/login 401 263.502 ms","timestamp":"2026-10-17T06:18:11.813Z"}
+{"level":"warn","message":"Rate limit exceeded: ::1 POST /api/v1/user/login","timestamp":"2026-10-17T05:55:13.002Z"}
+{"level":"info","message":"POST /api/v1/user/login 429 0.709 ms","timestamp":"2026-10-17T05:55:13.002Z"}
+{"level":"info","message":"Employee created 6ad315a6d1f1434a0bea10c8 by user 6ad30a4aefc6c76dd312905f","timestamp":"2026-10-17T06:28:54.095Z"}
+{"level":"info","message":"POST /api/v1/emp/employees 201 109.472 ms","timestamp":"2026-10-17T06:28:54.096Z"}
+{"level":"info","message":"Employee updated 6ad315a6d1f1434a0bea10c8 by user 6ad30a4aefc6c76dd312905f","timestamp":"2026-10-17T06:33:48.590Z"}
+{"level":"info","message":"PUT /api/v1/emp/employees/6ad315a6d1f1434a0bea10c8 200 130.966 ms","timestamp":"2026-10-17T06:33:48.592Z"}
+{"level":"warn","message":"Validation failed POST /api/v1/emp/employees: salary","timestamp":"2026-10-17T06:44:58.713Z"}
+{"level":"info","message":"POST /api/v1/emp/employees 400 38.828 ms","timestamp":"2026-10-17T06:44:58.714Z"}
+{"level":"warn","message":"Auth failure: missing token POST /api/v1/emp/employees","timestamp":"2026-10-17T06:47:41.418Z"}
+{"level":"info","message":"POST /api/v1/emp/employees 401 0.630 ms","timestamp":"2026-10-17T06:47:41.419Z"}
+{"level":"warn","message":"Auth failure: Invalid token POST /api/v1/emp/employees","timestamp":"2026-10-17T06:49:05.322Z"}
+{"level":"warn","message":"Auth failure: Token expired POST /api/v1/emp/employees","timestamp":"2026-10-17T07:17:00.390Z"}
+{"level":"warn","message":"Authorization failure: user 6ad30a4aefc6c76dd312905f tried to access employee 6ad3216a3bc22e1bd9d9681f","timestamp":"2026-10-17T07:26:29.595Z"}
+{"level":"info","message":"GET /api/v1/emp/employees/6ad3216a3bc22e1bd9d9681f 403 77.442 ms","timestamp":"2026-10-17T07:26:29.597Z"}
+{"level":"warn","message":"Authorization failure: user 6ad30b17efc6c76dd3129060 tried to access employee 6ad31b90d1f1434a0bea10c9","timestamp":"2026-10-17T07:32:08.896Z"}
+{"level":"info","message":"DELETE /api/v1/emp/employees?eid=6ad31b90d1f1434a0bea10c9 403 72.282 ms","timestamp":"2026-10-17T07:32:08.898Z"}
+{"level":"info","message":"Employee deleted 6ad31b90d1f1434a0bea10c9 by user 6ad30a4aefc6c76dd312905f","timestamp":"2026-10-17T07:35:59.943Z"}
+{"level":"info","message":"DELETE /api/v1/emp/employees?eid=6ad31b90d1f1434a0bea10c9 204 109.022 ms","timestamp":"2026-10-17T07:35:59.944Z"}
+{"level":"info","message":"GET /api/v1/emp/employees/507f1f77bcf86cd799439011 404 84.787 ms","timestamp":"2026-10-17T07:11:29.351Z"}
+{"level":"info","message":"GET /api/v1/nothing 404 0.263 ms","timestamp":"2026-10-17T07:12:18.128Z"}
