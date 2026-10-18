@@ -97,7 +97,8 @@ The real `.env` file is listed in `.gitignore` and is **never committed**.
 
 ## 4. API Endpoints
 
-Base URL: `http://localhost:3000`
+   Base URL (local): `http://localhost:3000`
+   Deployed API (Vercel): https://101570367-comp-3123-assignment1.vercel.app
 
 | # | Method | Endpoint | Auth | Success | Purpose |
 |---|---|---|---|---|---|
