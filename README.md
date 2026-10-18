@@ -125,6 +125,34 @@ The real `.env` file is listed in `.gitignore` and is **never committed**.
 ```json
 { "message": "Login successful", "token": "eyJhbGciOi...", "user": { "_id": "...", "username": "userA", "email": "usera@example.com" } }
 ```
+**Signup response (201)**
+```json
+{ "message": "User created successfully", "user_id": "6ad30a4aefc6c76dd312905f", "user": { "username": "userA", "email": "usera@example.com", "_id": "6ad30a4aefc6c76dd312905f", "created_at": "...", "updated_at": "..." } }
+```
+**Create employee response (201)**
+```json
+{ "message": "Employee created successfully", "employee_id": "6ad315a6d1f1434a0bea10c8", "employee": { "first_name": "John", "last_name": "Doe", "email": "john.doe@example.com", "position": "Developer", "salary": 75000, "date_of_joining": "2026-01-15T00:00:00.000Z", "department": "Engineering", "user": "6ad30a4aefc6c76dd312905f", "_id": "6ad315a6d1f1434a0bea10c8" } }
+```
+**Get all employees response (200)**: an array of the logged-in user's employees
+```json
+[ { "_id": "6ad315a6d1f1434a0bea10c8", "first_name": "John", "last_name": "Doe", "position": "Senior Developer", "salary": 80000, "user": "6ad30a4aefc6c76dd312905f", "...": "..." } ]
+```
+**Get employee by ID response (200)**: a single employee object (same shape as above)
+
+**Update employee response (200)**
+```json
+{ "message": "Employee details updated successfully", "employee": { "_id": "6ad315a6d1f1434a0bea10c8", "salary": 80000, "position": "Senior Developer", "...": "..." } }
+```
+**Delete employee response (204)**: no body
+
+**Error examples**
+```json
+{ "status": false, "message": "You do not have permission to access this employee" }   // 403
+{ "status": false, "message": "Employee not found" }                                      // 404
+{ "status": false, "message": "Username already exists" }                                 // 409
+{ "status": false, "message": "Too many authentication attempts, please try again in 15 minutes" } // 429
+```
+
 **Create / update employee**
 ```json
 {
